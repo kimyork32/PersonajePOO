@@ -12,7 +12,7 @@ class DynamicPersonajeArray{
             this->size = 0;
             this->data = new Personaje[size];
         }
-        DynamicPersonajeArray(Personaje arr[], int size){  //constructor con tamaño inicial y arreglo predeterminado
+        DynamicPersonajeArray(Personaje arr[], int size){  //constructor con tamaÃ±o inicial y arreglo predeterminado
             this->size = size;
             this->data = new Personaje[size];
             for(int i=0; i<size; i++)
@@ -43,7 +43,7 @@ class DynamicPersonajeArray{
         void insert(int index, Personaje value){
         	if(index<0||index>=size){
         		return;
-			}
+		}
 			
             Personaje *temp = new Personaje[size+1];
             for(int i=0; i<size; i++){
@@ -60,9 +60,9 @@ class DynamicPersonajeArray{
         }
         
         void remove(int index){
-        	if(index<0||index>=size){
-        		return;
-			}
+            if(index<0||index>=size){
+            	return;
+	    }
             Personaje *temp = new Personaje[size-1];
             for(int i=0; i<size-1; i++){
                 if(i>=index){
@@ -72,7 +72,7 @@ class DynamicPersonajeArray{
                 }
             }
             delete[] data;
-			data = temp;
+	    data = temp;
             size--;
         }
         
